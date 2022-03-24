@@ -18,32 +18,28 @@ class Rover {
             if (obstacle = this.detectObstacle(this.x, ((this.y + 1) % 3 + 3) % 3)) {
               return; 
             }
-            this.y += 1;
-            this.y = (this.y % 3 + 3) % 3;
+            this.y = ((this.y + 1) % 3 + 3) % 3;
             break;
           
           case 'E':
             if (obstacle = this.detectObstacle(((this.x + 1) % 3 + 3) % 3, this.y)) {
               return; 
             }
-            this.x += 1;
-            this.x = (this.x % 3 + 3) % 3;
+            this.x = ((this.x + 1) % 3 + 3) % 3;
             break;
           
           case 'S':
             if (obstacle = this.detectObstacle(this.x, ((this.y - 1) % 3 + 3) % 3)) {
               return; 
             }
-            this.y -= 1;
-            this.y = (this.y % 3 + 3) % 3;
+            this.y = ((this.y - 1) % 3 + 3) % 3;
             break;
           
           case 'W':
             if (obstacle = this.detectObstacle(((this.x - 1) % 3 + 3) % 3, this.y)) {
               return; 
             }
-            this.x -= 1;
-            this.x = (this.x % 3 + 3) % 3;
+            this.x = ((this.x - 1) % 3 + 3) % 3;
             break;
         }
       } else if (m === "b") {
@@ -52,16 +48,14 @@ class Rover {
             if (obstacle = this.detectObstacle(this.x, ((this.y - 1) % 3 + 3) % 3)) {
               return; 
             }
-            this.y -= 1
-            this.y = (this.y % 3 + 3) % 3;
+            this.y = ((this.y - 1) % 3 + 3) % 3;
             break;
           
           case 'E':
             if (obstacle = this.detectObstacle(((this.x - 1) % 3 + 3) % 3, this.y)) {
               return; 
             }
-            this.x -= 1;
-            this.x = (this.x % 3 + 3) % 3;
+            this.x = ((this.x - 1) % 3 + 3) % 3;
             break;
           
           case 'S':
@@ -69,16 +63,14 @@ class Rover {
             {
               return; 
             }
-            this.y += 1;
-            this.y = (this.y % 3 + 3) % 3;
+            this.y = ((this.y + 1) % 3 + 3) % 3;
             break;
           
           case 'W':
             if (obstacle = this.detectObstacle(((this.x + 1) % 3 + 3) % 3, this.y)) {
               return; 
             }
-            this.x += 1;
-            this.x = (this.x % 3 + 3) % 3;
+            this.x = ((this.x + 1) % 3 + 3) % 3;
             break;
         }
         
